@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sy7-3</title>
+<style>
+	*{margin: 0;padding: 0;}
+	body{
+		background-color: #000;
+		overflow: hidden;
+		color: #FFF;
+	}
+	div{
+		display: block;
+	}
+	.wrapper-bg {
+    background: url("images/map_table.jpg") no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 100%;
+	}
+	.wrapper {
+    height: 80%;
+	width: 92%;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+	}
+	.map-bg{
+		max-height: 100%;
+		max-width: 100%;
+	}
+	.d-leaf {
+    background: url("images/d-leaf.png") no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	}
+	.copyright {
+    bottom: 10px;
+    font-size: 12px;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    opacity: 0.4;
+    z-index: 900;
+	}
+	.main{
+		position: absolute;
+		opacity: 0.7;
+		background-color: #6E5E43;
+		border: 1px solid #4F3C30;
+		width: 30%;
+		height: 25%;
+		left: 50%;
+		top: 25%;
+		margin: 0 auto;
+		box-shadow: 8px 8px 30px 10px #000;
+		min-width: 330px;
+	}
+	form{
+		width: 48%;
+		height: 19%;
+		background-color: #F5EAE8;
+		padding: 16.9%;
+		border: 1px solid #F5EAE8;
+		margin: 0 9%;
+	}
+	.flag-n{
+		background: url("images/map_flag_n.png") no-repeat center;
+		width: 10%;
+		height: 19%;
+		top: 13%;
+		float: left;
+		position: absolute;
+		left: 28%;
+		transition:3s;
+		transition-timing-function: ease-out;
+	}
+	.flag-w{
+		background: url("images/map_flag_w.png") no-repeat center;
+		width: 10%;
+		height: 19%;
+		top: 27%;
+		float: left;
+		position: absolute;
+		left: 38%;
+		transition:3s;
+		transition-timing-function: ease-out;
+	}
+	.flag-s{
+		background: url("images/map_flag_s.png") no-repeat center;
+		width: 10%;
+		height: 19%;
+		top: 46%;
+		float: left;
+		position: absolute;
+		left: 28%;
+		transition:3s;
+		transition-timing-function: ease-out;
+	}
+	.flag-e{
+		background: url("images/map_flag_e.png") no-repeat center;
+		width: 10%;
+		height: 19%;
+		top: 27%;
+		float: left;
+		position: absolute;
+		left: 18%;
+		transition:3s;
+		transition-timing-function: ease-out;
+	}
+	.flag-e:hover,.flag-n:hover,.flag-s:hover,.flag-w:hover{
+		transform: rotateY(180deg);
+	}
+	input{
+		display: block;
+	}
+	[type="text"],[type="password"]{
+		width: 100%;
+		height: 100%;
+		border: 1px solid #4F3C30;
+		margin-bottom: 10%;
+		margin-top: -8%;
+		font-size: 13px;
+		text-indent: 50px;
+	}
+	[type="text"]{
+		background: url("images/zhanghao.jpg") no-repeat 0 -2px;
+	}
+	[type="password"]{
+		background: url("images/mima.jpg") no-repeat 0 -2px;
+	}
+	[type="checkbox"]{
+		display: inline;
+		vertical-align: middle;
+	}
+	label{
+		font-size: 12px;
+	}
+	.reg{
+		text-align: right;
+		font-size: 12px;
+		margin-top: -18px;
+	}
+	.reg a{
+		color: #999;
+		text-decoration: none;
+	}
+	.reg a:hover{
+		color:#FFF;
+		text-decoration: underline;
+	}
+	[type="button"]{
+		width: 255px;
+		height: 44px;
+		margin: 25px auto;
+		background-image: url("images/but.jpg");
+		border: none;
+	}
+	.related{
+		width: 330px;
+		height: 145px;
+		background-color: #F5EAE8;
+		border-top: 1px solid #DDD;
+		padding-top: 20px;
+		text-align: center;
+		font-size: 14px;
+		margin: auto;
+	}
+	.title{
+		position: absolute;
+		float: right;
+		top: 14%;
+		right: 22%;
+		font-size: 55px;
+		display: block;
+		font-family: "Blackadder ITC";
+		text-shadow: 10px 7px 2px rgba(0,0,0,0.6);
+	}
+</style>
+</head>
+
+<body>
+	<div class="wrapper-bg">
+		<div class="wrapper" style="margin-top: 89.5px">
+			<img class="map-bg" src="images/map_bg.png" alt="主体">
+			<p class="title">Welcome to the Hoshimi Land</p>
+			<div class="d-leaf"></div>
+			<div class="flag-n"></div>
+			<div class="flag-w"></div>
+			<div class="flag-s"></div>
+			<div class="flag-e"></div>
+			<div class="main">
+				<form action="#" method="post" name="form">
+					<input type="text" name="user" placeholder="用户名/邮箱地址/手机号">
+					<input type="password" name="password" placeholder="填写密码">
+					<input type="checkbox" name="account" value="1" id="account">
+					<label for="account">记住账号</label>
+					<div class="reg">
+						<a href="#">欢迎注册</a>
+						<a href="#">忘记密码</a>
+					</div>
+				</form>
+			</div>
+			</div>
+			<p class="copyright">
+				Copyright &copy; 2019  All Rights Reserved.
+			</p>
+	</div>
+</body>
+</html>
